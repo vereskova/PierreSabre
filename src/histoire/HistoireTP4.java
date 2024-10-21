@@ -1,6 +1,7 @@
 package histoire;
 
 import personnages.Humain;
+import personnages.Ronin;
 import personnages.Commercant;
 import personnages.Yakuza;
 
@@ -25,12 +26,28 @@ public class HistoireTP4 {
 //        marco.recevoir(15);
 //        marco.boire();
     	
-    	// Test du Yakuza
-        Yakuza yakuLeNoir = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
-        Commercant marco = new Commercant("Marco", 15);
-        yakuLeNoir.direBonjour();
-        yakuLeNoir.parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
-        yakuLeNoir.extorquer(marco);
+    	
+		/*
+		 * // Test du Yakuza
+		 * 
+		 * Yakuza yakuLeNoir = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
+		 * 
+		 * Commercant marco = new Commercant("Marco", 15);
+		 * 
+		 * yakuLeNoir.direBonjour(); yakuLeNoir.
+		 * parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?"
+		 * ); yakuLeNoir.extorquer(marco);
+		 */
+        
+    	// Test du Ronin
+
+        Commercant marco = new Commercant("Marco", 20);
+
+        Ronin roro = new Ronin("Roro", "shochu", 60);
+
+        roro.direBonjour();
+        // Le ronin donne 10% de son argent à Marco
+        roro.donner(marco);
         
     }  
 }
