@@ -39,15 +39,37 @@ public class HistoireTP4 {
 		 * ); yakuLeNoir.extorquer(marco);
 		 */
         
-    	// Test du Ronin
+		/*
+		 * // Test du Ronin
+		 * 
+		 * Commercant marco = new Commercant("Marco", 20);
+		 * 
+		 * Ronin roro = new Ronin("Roro", "shochu", 60);
+		 * 
+		 * roro.direBonjour(); // Le ronin donne 10% de son argent à Marco
+		 * roro.donner(marco);
+		 */
+        
+        
+        // Création du commerçant Marco
+        Commercant marco = new Commercant("Marco", 15);
 
-        Commercant marco = new Commercant("Marco", 20);
+        // Création du Yakuza Yaku Le Noir
+        Yakuza yakuLeNoir = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
 
+        // Le Yakuza extorque Marco
+        yakuLeNoir.direBonjour();
+        yakuLeNoir.extorquer(marco);
+
+        // Création du Ronin Roro
         Ronin roro = new Ronin("Roro", "shochu", 60);
 
+        // Le Ronin donne de l'argent à Marco
         roro.direBonjour();
-        // Le ronin donne 10% de son argent à Marco
         roro.donner(marco);
+
+        // Le Ronin provoque le Yakuza en duel
+        roro.provoquer(yakuLeNoir);
         
     }  
 }
